@@ -3,6 +3,7 @@ import 'package:simple_location_picker/simple_location_picker_screen.dart';
 import 'package:simple_location_picker/simple_location_result.dart';
 import 'package:simple_location_picker/utils/slp_constants.dart';
 import 'package:Weather/screens/Loading.dart';
+import 'package:Weather/screens/Weather.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/loading',
       routes: {
         '/loading': (context) => Loading(),
-        // '/weather': (context) => Loading(),
+        '/weather': (context) => Weather(),
       }
     );
   }

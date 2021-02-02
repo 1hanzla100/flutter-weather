@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:Weather/models/weather.dart';
 
 class Weather extends StatefulWidget {
   Weather({Key key}) : super(key: key);
@@ -8,11 +9,14 @@ class Weather extends StatefulWidget {
 }
 
 class _WeatherState extends State<Weather> {
+  WeatherData weather;
   Map data;
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Text(""),
+    weather = ModalRoute.of(context).settings.arguments;
+    print(weather.name);
+    return Scaffold(
+      body: Text("")
     );
   }
 }
