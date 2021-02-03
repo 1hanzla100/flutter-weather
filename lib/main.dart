@@ -11,14 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Yumniastic',
-      theme: ThemeData.dark(),
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/loading',
-      routes: {
-        '/loading': (context) => Loading(),
-        '/weather': (context) => Weather(),
-      }
-    );
+        title: 'Yumniastic',
+        theme: ThemeData.light(),
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/loading',
+        routes: {
+          '/loading': (context) => Loading(),
+          '/weather': (context) => Weather(),
+        });
   }
 }

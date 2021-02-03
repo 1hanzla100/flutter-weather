@@ -30,6 +30,7 @@ dependencies:
   flutter_icons: ^1.1.0
   intl: ^0.16.1
   google_fonts: ^1.1.2
+  flutter_svg: ^0.18.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -53,6 +54,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/
+    - assets/svgs/
 
   # fonts:
   #   - family: Schyler

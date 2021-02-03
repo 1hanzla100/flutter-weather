@@ -16,8 +16,8 @@ class _LoadingState extends State<Loading> {
   String apiKey = "afc78b05691f942fec865ba4eb5d2f6d";
   SimpleLocationResult arguments;
   getData({lat, lon}) async {
-    String latitude = lat == null ? "31.5204" : lat.toString();
-    String longitude = lon == null ? "74.3587" : lon.toString();
+    String latitude = lat == null ? "31.5102" : lat.toString();
+    String longitude = lon == null ? "74.3441" : lon.toString();
 
     Response response = await get(
         "http://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey");
@@ -33,8 +33,7 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     arguments = ModalRoute.of(context).settings.arguments;
-    Future.delayed(Duration(seconds: 2),
-        () => arguments != null ? getData(lat: arguments.latitude, lon: arguments.longitude) :  getData());
+    arguments != null ? getData(lat: arguments.latitude, lon: arguments.longitude) :  getData();
     return Scaffold(
         body: Center(child: LottieBuilder.asset("assets/loading.json")));
   }
