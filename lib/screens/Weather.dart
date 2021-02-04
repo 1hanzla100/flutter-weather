@@ -6,7 +6,6 @@ import 'package:Weather/models/weather.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lottie/lottie.dart';
 
 //
 class Weather extends StatefulWidget {
@@ -153,7 +152,7 @@ class _WeatherState extends State<Weather> {
               Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey[200],
+                    color: Colors.deepOrange,
                   ),
                   padding: EdgeInsets.all(15),
                   child: Row(
@@ -168,7 +167,7 @@ class _WeatherState extends State<Weather> {
                                 style: GoogleFonts.lato(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.grey[600],
+                                  color: Colors.white,
                                 )),
                           ),
                           Padding(
@@ -177,8 +176,8 @@ class _WeatherState extends State<Weather> {
                               "${weather.visibility} km",
                               style: GoogleFonts.lato(
                                 fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           )
@@ -193,7 +192,7 @@ class _WeatherState extends State<Weather> {
                                 style: GoogleFonts.lato(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.grey[600],
+                                  color: Colors.white,
                                 )),
                           ),
                           Padding(
@@ -202,8 +201,8 @@ class _WeatherState extends State<Weather> {
                               "${weather.humidity}%",
                               style: GoogleFonts.lato(
                                 fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           )
@@ -218,7 +217,7 @@ class _WeatherState extends State<Weather> {
                                 style: GoogleFonts.lato(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w400,
-                                  color: Colors.grey[600],
+                                  color: Colors.white,
                                 )),
                           ),
                           Padding(
@@ -227,8 +226,8 @@ class _WeatherState extends State<Weather> {
                               "${weather.pressure}mb",
                               style: GoogleFonts.lato(
                                 fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           )
