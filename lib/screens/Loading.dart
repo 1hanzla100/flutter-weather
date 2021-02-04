@@ -13,7 +13,7 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-  String apiKey = "afc78b05691f942fec865ba4eb5d2f6d";
+  String apiKey = "<ADD API KEY HERE>";
   SimpleLocationResult arguments;
   getData({lat, lon}) async {
     String latitude = lat == null ? "31.5925" : lat.toString();
