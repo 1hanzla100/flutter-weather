@@ -29,7 +29,8 @@ class _WeatherState extends State<Weather> {
         body: RefreshIndicator(
       onRefresh: () async {
         await Future.delayed(Duration(seconds: 1));
-        Navigator.pushReplacementNamed(context, '/loading', arguments: selectedLocation);
+        Navigator.pushReplacementNamed(context, '/loading',
+            arguments: selectedLocation);
         return null;
       },
       child: SafeArea(
@@ -105,7 +106,8 @@ class _WeatherState extends State<Weather> {
                 child: Column(children: [
                   Transform.scale(
                       scale: 1.6,
-                      child: SvgPicture.asset("assets/svgs/${weather.icon}.svg")),
+                      child:
+                          SvgPicture.asset("assets/svgs/${weather.icon}.svg")),
                   // LottieBuilder.asset("assets/svgs/${weather.icon}.svg")
                   SizedBox(height: 10),
                   Row(
@@ -149,89 +151,106 @@ class _WeatherState extends State<Weather> {
                   ),
                 ]),
               ),
-              Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.deepOrange,
-                  ),
+              Padding(
                   padding: EdgeInsets.all(15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(3.0),
-                            child: Text("Visibility",
-                                style: GoogleFonts.lato(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                )),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(3.0),
-                            child: Text(
-                              "${weather.visibility} km",
-                              style: GoogleFonts.lato(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.deepOrange,
+                        ),
+                        padding: EdgeInsets.all(15),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(3.0),
+                              child: Text("Visibility",
+                                  style: GoogleFonts.lato(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                  )),
                             ),
-                          )
-                        ],
+                            Padding(
+                              padding: EdgeInsets.all(3.0),
+                              child: Text(
+                                "${weather.visibility} km",
+                                style: GoogleFonts.lato(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(3.0),
-                            child: Text("Humidity",
-                                style: GoogleFonts.lato(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                )),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(3.0),
-                            child: Text(
-                              "${weather.humidity}%",
-                              style: GoogleFonts.lato(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.deepOrange,
+                        ),
+                        padding: EdgeInsets.all(15),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(3.0),
+                              child: Text("Humidity",
+                                  style: GoogleFonts.lato(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                  )),
                             ),
-                          )
-                        ],
+                            Padding(
+                              padding: EdgeInsets.all(3.0),
+                              child: Text(
+                                "${weather.humidity}%",
+                                style: GoogleFonts.lato(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.all(3.0),
-                            child: Text("Pressure",
-                                style: GoogleFonts.lato(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                )),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.all(3.0),
-                            child: Text(
-                              "${weather.pressure}mb",
-                              style: GoogleFonts.lato(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Colors.deepOrange,
+                        ),
+                        padding: EdgeInsets.all(15),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.all(3.0),
+                              child: Text("Pressure",
+                                  style: GoogleFonts.lato(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                  )),
                             ),
-                          )
-                        ],
+                            Padding(
+                              padding: EdgeInsets.all(3.0),
+                              child: Text(
+                                "${weather.pressure}mb",
+                                style: GoogleFonts.lato(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       )
                     ],
                   ))
