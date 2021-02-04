@@ -16,11 +16,11 @@ class _LoadingState extends State<Loading> {
   String apiKey = "afc78b05691f942fec865ba4eb5d2f6d";
   SimpleLocationResult arguments;
   getData({lat, lon}) async {
-    String latitude = lat == null ? "31.5102" : lat.toString();
-    String longitude = lon == null ? "74.3441" : lon.toString();
+    String latitude = lat == null ? "31.5925" : lat.toString();
+    String longitude = lon == null ? "74.3095" : lon.toString();
 
     Response response = await get(
-        "http://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey");
+        "http://api.openweathermap.org/data/2.5/weather?units=metric&lat=$latitude&lon=$longitude&appid=$apiKey");
     Map data = jsonDecode(response.body);
 
     Navigator.pushReplacementNamed(context, "/weather",
