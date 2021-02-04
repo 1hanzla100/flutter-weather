@@ -37,6 +37,10 @@ class _LoadingState extends State<Loading> {
       arguments != null ? getData(lat: arguments.latitude, lon: arguments.longitude) :  getData()
     });
     return Scaffold(
-        body: Center(child: LottieBuilder.asset("assets/loading.json")));
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [LottieBuilder.asset("assets/loading.json")],
+        ));
   }
 }
