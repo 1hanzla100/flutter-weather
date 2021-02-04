@@ -33,7 +33,9 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     arguments = ModalRoute.of(context).settings.arguments;
-    arguments != null ? getData(lat: arguments.latitude, lon: arguments.longitude) :  getData();
+    Future.delayed(Duration(seconds: 1), () => {
+      arguments != null ? getData(lat: arguments.latitude, lon: arguments.longitude) :  getData()
+    });
     return Scaffold(
         body: Center(child: LottieBuilder.asset("assets/loading.json")));
   }
