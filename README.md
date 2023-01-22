@@ -48,6 +48,12 @@ Prerequisite: https://flutter.dev/docs/get-started/install
 * LinkedIn: [@1hanzla100](https://linkedin.com/in/1hanzla100)
 
 ## 🤝 Contributing
+👤 **Vikkybliz**
+
+* Youtube: https://youtube.com/@vikkybliz
+* Twitter: [@Vikkybliz_](https://twitter.com/vikkybliz_)
+* Github: [@Vikkybliz](https://github.com/vikkybliz)
+* LinkedIn: [@Vikkybliz](https://linkedin.com/in/Vikkybliz)
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/1hanzla100/flutter-weather/issues). You can also take a look at the [contributing guide](https://github.com/1hanzla100/flutter-weather/blob/master/CONTRIBUTING.md).
 
