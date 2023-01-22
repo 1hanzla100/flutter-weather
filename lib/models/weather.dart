@@ -11,18 +11,19 @@ class WeatherData {
   String icon;
 
   WeatherData(
-      {this.condition,
-      this.temperature,
-      this.feelsLike,
-      this.visibility,
-      this.pressure,
-      this.humidity,
-      this.windSpeed,
-      this.country,
-      this.name,
-      this.icon});
+      {
+      required this.condition,
+      required this.temperature,
+      required this.feelsLike,
+      required this.visibility,
+      required this.pressure,
+      required this.humidity,
+      required this.windSpeed,
+      required this.country,
+      required this.name,
+      required this.icon});
 
-  factory WeatherData.fromJson(Map<String, dynamic> json) {
+  factory WeatherData.fromJson(Map<dynamic, dynamic> json) {
     return WeatherData(
       condition: json['weather'][0]['main'],
       temperature: (json['main']['temp']).round(),
